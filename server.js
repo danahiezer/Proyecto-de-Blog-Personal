@@ -6,8 +6,8 @@ const PORT = 3000
 
 
 // Motor de plantillas
-app.engine('handlebars', engine())
-app.set('view engine', 'handlebars')
+app.engine('hbs', engine())
+app.set('view engine', 'hbs')
 app.set('views', './views')
 
 // Middlewares
