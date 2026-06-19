@@ -14,6 +14,9 @@ app.set('views', './views')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
+const articulosRouters = require("./routes/routes")
+app.use("/articulos",articulosRouters)
+
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`)
