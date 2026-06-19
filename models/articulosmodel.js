@@ -26,7 +26,7 @@ const crearArticulo = async (titulo, contenido, categoria) => {
 }
 
 // actualizar articulo
-const actualizarArticulo = async (id) => {
+const actualizarArticulo = async (id,titulo,contenido,categoria) => {
     await pool.query(
         "UPDATE articulos SET titulo=$1, contenido=$2, categoria=$3 WHERE id=$4",
         [titulo,contenido,categoria]
