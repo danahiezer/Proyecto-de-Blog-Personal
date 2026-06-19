@@ -14,7 +14,7 @@ app.set('views', './views')
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
-const articulosRouters = require("./routes/routes")
+const articulosRouters = require("./routers/routers")
 app.use("/articulos",articulosRouters)
 
 // Iniciar servidor
