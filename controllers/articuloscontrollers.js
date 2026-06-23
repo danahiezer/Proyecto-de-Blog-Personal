@@ -9,8 +9,8 @@ const {
 
 // listar articulos
 const listarArticulos = async (req, res) => {
-    const articulo = await obtenerArticulos()
-    res.render("articulos", { articulo })
+    const articulos = await obtenerArticulos()
+    res.render("articulos", { articulos })
 }
 
 // fromulario para crear articulo 
@@ -26,9 +26,9 @@ const CrearArticController = async (req, res) => {
 }
 
 // formulario para editar
-const formEditarArticulo = (req, res) => {
-    const articulo = await obtenerArticuloporID(req.params.id)
-    res.render("editar", { articulo })
+const formEditarArticulo = async (req, res) => {
+    const EditArtic = await obtenerArticuloporID(req.params.id)
+    res.render("editar", { EditArtic })
 }
 
 // actualizar articulo
