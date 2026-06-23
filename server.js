@@ -6,7 +6,9 @@ const PORT = 3000
 
 
 // Motor de plantillas
-app.engine('hbs', engine())
+app.engine('hbs', engine({
+  extname: ".hbs"
+}))
 app.set('view engine', 'hbs')
 app.set('views', './views')
 
