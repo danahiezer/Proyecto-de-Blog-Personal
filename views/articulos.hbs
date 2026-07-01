@@ -2,7 +2,10 @@
  
 <ul>{{#each articulos}}
 <li>
-    <a href="articulos/{{id}}/editar">Editar</a>
+    <a href="/articulos/{{id}}/editar">Editar</a>
     {{this.titulo}} - {{this.contenido}} - {{this.categoria}}
+    <form action="/articulos/{{id}}/eliminar" method="post" style="display: inline;">
+    <button type="submit">eliminar</button>
+    </form>
 </li>
 {{/each}}</ul>
