@@ -1,9 +1,9 @@
 const pool = require("../database")
 
-// obtener articulos ordenados por votos
+// obtener articulos y ordenados por mas recientes
 const obtenerArticulos = async () => {
     const resultado = await pool.query(
-        "SELECT * FROM articulos ORDER BY votos DESC"
+        "SELECT * FROM articulos ORDER BY created_at DESC"
     )
     return resultado.rows // . row devuelve en array de todos los registros
 
