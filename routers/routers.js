@@ -17,6 +17,5 @@ Router.post("/crear", CrearArticController)
 Router.get("/:id/editar", formEditarArticulo)
 Router.post("/:id/editar", actualizarArticController)
 Router.post("/:id/eliminar", EliminarArticController)
-Router.post("/:id/votar", votarArticuloController)
 
 module.exports = Router
