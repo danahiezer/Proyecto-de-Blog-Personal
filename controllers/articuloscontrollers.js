@@ -44,11 +44,6 @@ const EliminarArticController = async (req, res) => {
     res.redirect("/articulos")
 }
 
-// votar articulo
-const votarArticuloController = async (req, res) => {
-    const votos = await votarArticulo(req.params.id)
-    res.json({ votos })
-}
 
 module.exports = {
     listarArticulos,
