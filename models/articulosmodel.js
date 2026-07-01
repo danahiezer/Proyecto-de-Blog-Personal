@@ -29,7 +29,7 @@ const crearArticulo = async (titulo, contenido, categoria) => {
 const actualizarArticulo = async (id,titulo,contenido,categoria) => {
     await pool.query(
         "UPDATE articulos SET titulo=$1, contenido=$2, categoria=$3 WHERE id=$4",
-        [titulo,contenido,categoria]
+        [titulo,contenido,categoria,parseInt(id)]
     )
 }
 
